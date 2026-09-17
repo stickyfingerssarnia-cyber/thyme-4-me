@@ -5,6 +5,10 @@ html {
 }
 
 /* Cross-site link between ME Thyme and Soup's Up. */
+.navbar3_container {
+  position: relative;
+}
+
 .site-switcher {
   color: var(--color-scheme-1--text);
   text-align: center;
@@ -13,8 +17,12 @@ html {
   justify-content: center;
   align-items: center;
   gap: .2rem;
-  min-width: 7.5rem;
+  width: 8.5rem;
   display: flex;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
 }
 
 .site-switcher_label {
@@ -26,8 +34,9 @@ html {
 
 .site-switcher_logo {
   object-fit: contain;
-  width: 96px;
-  height: 42px;
+  width: 120px;
+  height: auto;
+  max-height: 48px;
 }
 
 .site-switcher:hover .site-switcher_label,
@@ -37,24 +46,30 @@ html {
 
 @media screen and (max-width: 991px) {
   .site-switcher {
-    min-width: 6.25rem;
+    width: 7rem;
   }
 
   .site-switcher_logo {
-    width: 80px;
-    height: 38px;
+    width: 100px;
+    height: auto;
+    max-height: 42px;
   }
 }
 
 @media screen and (max-width: 479px) {
+  .site-switcher {
+    width: 5.75rem;
+  }
+
   .site-switcher_label {
-    max-width: 6rem;
+    max-width: 5.75rem;
     font-size: .58rem;
   }
 
   .site-switcher_logo {
-    width: 68px;
-    height: 34px;
+    width: 82px;
+    height: auto;
+    max-height: 34px;
   }
 }
 
