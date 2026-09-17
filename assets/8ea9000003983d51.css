@@ -4,6 +4,60 @@ html {
   font-family: sans-serif;
 }
 
+/* Cross-site link between ME Thyme and Soup's Up. */
+.site-switcher {
+  color: var(--color-scheme-1--text);
+  text-align: center;
+  text-decoration: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: .2rem;
+  min-width: 7.5rem;
+  display: flex;
+}
+
+.site-switcher_label {
+  letter-spacing: .02em;
+  font-size: .68rem;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.site-switcher_logo {
+  object-fit: contain;
+  width: 96px;
+  height: 42px;
+}
+
+.site-switcher:hover .site-switcher_label,
+.site-switcher:focus-visible .site-switcher_label {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 991px) {
+  .site-switcher {
+    min-width: 6.25rem;
+  }
+
+  .site-switcher_logo {
+    width: 80px;
+    height: 38px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .site-switcher_label {
+    max-width: 6rem;
+    font-size: .58rem;
+  }
+
+  .site-switcher_logo {
+    width: 68px;
+    height: 34px;
+  }
+}
+
 body {
   margin: 0;
 }
