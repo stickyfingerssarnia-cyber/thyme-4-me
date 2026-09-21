@@ -6640,3 +6640,42 @@ figcaption {
     grid-area: span 1 / span 1 / span 1 / span 1;
   }
 }
+
+/* Keep the mobile header to one balanced row. */
+@media screen and (max-width: 479px) {
+  .navbar3_container {
+    grid-column-gap: 8px;
+    grid-template-columns: 48px minmax(0, 1fr) 92px;
+    min-height: 80px;
+    display: grid;
+    position: relative;
+  }
+
+  .navbar3_logo-link {
+    grid-column: 2;
+    justify-self: center;
+  }
+
+  .navbar3_logo-link .navbar3_logo {
+    width: 100px;
+    height: 64px;
+  }
+
+  .site-switcher {
+    width: 92px;
+    min-width: 0;
+    top: 50%;
+    right: 0;
+  }
+
+  .site-switcher_label {
+    max-width: 92px;
+    font-size: .54rem;
+  }
+
+  .site-switcher_logo {
+    width: 72px;
+    height: auto;
+    max-height: 30px;
+  }
+}
